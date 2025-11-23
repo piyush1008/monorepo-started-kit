@@ -1,8 +1,10 @@
 
 
+
 import express from "express";
 
 const app=express();
+app.use(express.json());
 
 
 app.get("/",(req,res)=>{
@@ -11,6 +13,19 @@ app.get("/",(req,res)=>{
     })
 })
 
+// app.post("/user",async(req,res)=>{
+//     const {username, password}=req.body
+//     const usr=await prismaClient.user({
+//         data:{
+//             username,
+//             password
+//         }
+//     })
+
+//     return res.json({
+//         message: "user signup created"
+//     })
+// })
 
 
 

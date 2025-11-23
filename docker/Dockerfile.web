@@ -10,10 +10,10 @@ COPY ./package.json ./package.json
 
 COPY ./packages ./packages
 
-COPY ./apps/http-backend ./apps/http-backend
+COPY ./apps/web ./apps/web
 
 RUN bun install
 
-EXPOSE 80000
+EXPOSE 3000
 
 CMD ["bun", "run", "start:web"]

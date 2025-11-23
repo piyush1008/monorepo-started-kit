@@ -10,10 +10,10 @@ COPY ./package.json ./package.json
 
 COPY ./packages ./packages
 
-COPY ./apps/http-backend ./apps/http-backend
+COPY ./apps/ws-server ./apps/ws-server
 
 RUN bun install
 
-EXPOSE 80000
+EXPOSE 8081
 
 CMD ["bun", "run", "start:ws"]
