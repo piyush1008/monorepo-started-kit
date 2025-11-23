@@ -15,16 +15,19 @@ app.get("/",(req,res)=>{
     })
 })
 
-// app.post("/user",async(req,res)=>{
-//     const {username, password}=req.body
-//     const usr=await prisma.$extends({
+app.post("/user",async(req,res)=>{
+    const {username, password}=req.body
+    const usr=await prisma.user.create({
+        data:{
+            username,
+            password
+        }
+    })
 
-//     })
-
-//     return res.json({
-//         message: "user signup created"
-//     })
-// })
+    return res.json({
+        message: "user signup created"
+    })
+})
 
 
 
