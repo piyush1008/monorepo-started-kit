@@ -16,3 +16,4 @@ RUN bun install
 
 EXPOSE 80000
 
+CMD ["bun", "run", "start:backend"]
